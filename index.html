@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Bootstrapp/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url(Background-zone-2.png);
+            background-repeat:no-repeat;
+            background-size: 1400px 800px;
+            background-position: center;
+        }
+        @font-face {
+            font-family: 'montserrat (1)';
+            src: url(MontserratAlternates-BoldItalic.otf);
+        }
+        .letters{
+            position: absolute;
+            left: 35%;
+            top: 30%;
+            font-family: 'montserrat (1)','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 1500;
+        }
+        .formulaire{
+            position: absolute;
+            top: 400px;
+            left: 10%;
+        }
+        .col-lg-6 p{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* Responsivité background */
+        @media screen and (max-width : 780px ) {
+            body{
+            background-size: 600px 600px;
+            background-position: center;
+        }
+        .letters{
+            left: 10%;
+            top: 15%;
+        }
+        .formulaire{
+            top: 300px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ml11">
+        <span class="text-wrapper">
+          <span class="letters"> Bienvenu sur Rab Store. </span>
+        </span>
+      </h1>
+      <div class="formulaire">
+          <div class="row">
+                <div class="col-lg-4">
+                    <form method="POST" class="col-lg-6" action="index.php">
+                        <legend> Remplissez ce formulaire </legend>
+                        * Nom * <input type="text" class="form-control form-group" name="nom" placeholder="Entrer votre nom ">
+                        * Prénoms * <input type="text" class="form-control form-group"  name="prenom" placeholder="Entrer votre prénom">
+                      </form>
+                </div>
+                <div class="col-lg-4">
+                    <p>
+                        Faites une sélection de votre statut ou entrer directement le code d'accès au site.
+                     </p>
+                     <form method="POST" class="col-lg-6" action="index.php">
+                        * Selectionner *
+                         <select class="form-control form-group">
+                         <option> Aucun </option>
+                         <option> Etudiant en IG/ENEAM </option>
+                         <option> Etudiant à l'ENEAM </option>
+                         <option> Enseignant en IG </option>
+                         <option> Médécin </option>
+                         <option> Autre emploi rémunératrice </option>
+                         </select>
+                     </form>
+                </div>
+                <div class="col-lg-4">
+                    <form method="POST" class="col-lg-6" action="index.php"> 
+                        * Code d'accès * <input type="number" class="form-control form-group"> 
+                         <button class="btn btn-success" type="submit" class="col-lg-6 form-control form-group"> Visitez le site </button>
+                    </form>
+                </div>
+          </div>
+
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script>
+        // Wrap every letter in a span
+      var textWrapper = document.querySelector('.ml11 .letters');
+      textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+      
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml11 .line',
+          scaleY: [0,1],
+          opacity: [0.5,1],
+          easing: "easeOutExpo",
+          duration: 700
+        })
+        .add({
+          targets: '.ml11 .line',
+          translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+          easing: "easeOutExpo",
+          duration: 100,
+          delay: 100
+        }).add({
+          targets: '.ml11 .letter',
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: '-=775',
+          delay: (el, i) => 34 * (i+1)
+        }).add({
+          targets: '.ml11',
+          opacity: 0,
+          duration: 2000,
+          easing: "easeOutExpo",
+          delay: 400
+        });
+      </script>
+      
+      
+</body>
+</html>
