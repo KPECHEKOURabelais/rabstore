@@ -2,7 +2,8 @@
     font-family: 'Aquiline';
     src: url(AquilineTwo.ttf);
 }
-p{
+/* Rab store du header  */
+#rab-store{
     font-family: 'Aquiline','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #f7f7f7;
     font-weight: 1200;
@@ -10,6 +11,7 @@ p{
     box-shadow: 5px 5px 10px black;
     padding: 0 20px 5px 15px ;
 }
+/* Rab Store du footer */
 .rab-store{
     font-family: 'Aquiline','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #f7f7f7;
@@ -19,16 +21,19 @@ p{
     padding: 1px 5px 5px 15px ;
     margin: 20px 0 0 0;
 }
+/* Photo de facebook et Telegram */
 .photo{
     width: 30px;
     height: 30px;
 }
-p:hover{
+/* Rab Store apparence au survol de la souris */
+.rab-store:hover, #rab-store:hover{
     background-color: whitesmoke;
     color: #272727;
     height: 70px;
 }
-a, ul{
+/*LES LIENS */
+a,.text-right ul, footer ul{
     color: chocolate;
     text-decoration: none;
     list-style-type: none;
@@ -40,6 +45,18 @@ a:hover{
 footer a{
     color: chocolate;
 }
+/*Les H5 du footer et l'element copyright */
 footer h5, .info{
     color: whitesmoke;
+}
+footer{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+}
+@media screen and (max-width: 780px) {
+    footer{
+        position: inherit;
+    }
 }

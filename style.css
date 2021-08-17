@@ -1,0 +1,23 @@
+body{
+    background : url(mWE8aq.jpg);
+}
+/*Plan du site */
+#planduSite ul, #planduSite{
+    list-style-type: none;
+    font-size: x-large;
+    text-align: justify;
+    margin: 0 0 0 120px;
+}
+/* Triangle servant de puce */
+#planduSite span{
+    font-size: 20px;
+}
+/* Responsivité de la page de PLAN */
+@media screen and (max-width:780px) {
+    #planduSite ul, #planduSite{
+        margin:0;
+    }
+    #planduSite{
+        margin: 7px;
+    }
+}
