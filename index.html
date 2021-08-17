@@ -74,7 +74,9 @@
                         * Choix du statut *
                          <select name="select" class="form-control form-group" onblur="selection(this)">
                          <option value="Aucun"> Aucun </option>
-                         <option value="IG"> Etudiant en IG/ENEAM </option>
+                         <option value="IG"> Etudiant en IG 1/ENEAM </option>
+                         <option value="ENEAM"> Etudiant à IG 2/ENEAM </option>
+                         <option value="ENEAM"> Etudiant à IG 3/ENEAM </option>
                          <option value="ENEAM"> Etudiant à l'ENEAM </option>
                          <option value="professeur"> Professeur en IG </option>
                          <option value="medecin"> Médécin </option>
@@ -122,24 +124,10 @@
                        return true;
            } 
         }
-        /* Fonction Du Code d'accès */
-        function code(champ){
-          var codeExact = 12204;
-          var code= champ.value;
-         if(isNaN(code) || code != codeExact){
-               surligne(champ, true);
-              return false;
-           }
-         else{
-               surligne(champ, false);
-               return true;
-           }
-          }
           /* Fonction du select */
           function selection(champ){
             if(champ.value != 'IG'){
               surligne(champ, true);
-              alert('Mauvais choix');
               return false;
             }
             else{
@@ -148,18 +136,30 @@
             }
 
           }
-
+           /* Fonction Du Code d'accès */
+        function code(champ){
+          var code= champ.value;
+         if( code != 12204){
+               surligne(champ, true);
+              return false;
+           }
+         else{
+               surligne(champ, false);
+               return true;
+           }
+          }
           /* Fonction de Confirmation du formulaire */
           function VerifierFormulaire(champ){
             var nomOk = nomVerifier(champ.nom);
             var prenomOk = prenomVerifier(champ.prenom);
             var selectionOk = selection(champ.select);
-            var codeOK = code(champ.code);
-           if(nomOk && prenomOk && ( selectionOk || codeOk )){
-            return true;
+            var codeOk = code(champ.code);
+            var bool = nomOk && prenomOk && ( selectionOk || codeOk);
+           if(bool){
+            return bool;
            } else {
             alert("Veuillez remplir correctement tous les champs");
-              return false;
+              return bool;
           }
         }
         // Wrap every letter in a span
