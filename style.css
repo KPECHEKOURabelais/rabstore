@@ -45,13 +45,13 @@ h3{
 #planduSite span{
     font-size: 20px;
 }
-@font-face {
+@font-face{
     font-family: 'Aquiline';
     src: url(Aquiline/AquilineTwo.ttf);
     font-family: 'montserra (1)';
     src: url(Montserrat-BoldItalic.otf);
 }
-.discours .rab{
+.discours .rab, .rab{
     font-family: 'Aquiline','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: black;
     font-weight: bold;
@@ -75,6 +75,16 @@ h3{
         margin: 0 0 20px 0;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
     }
+    /* Corrigé */
+    .tab-corrige, .corrige1{
+        padding: 0 100px 0 200px;
+       line-height: 20px;
+       width: 400px;
+       position: relative;
+       right: 100px;
+       text-align: left;
+       margin: 0 200px 0 0;
+    }    
 }
 /* Voltaire */
 .auteur img, .auteur1 img, .auteur2 img{
@@ -136,13 +146,125 @@ section .algo{
 .puce{
     font-size: 25px;
 }
-.tab-corrige{
-    margin: 0 0 0 100px;
-   background-color: sandybrown;
-    color: rgb(206, 179, 179);
-    font-weight: bold;
+#exo1, #exo2, #exo3{
+    padding-bottom: 100px;
 }
-.algo h1{
+.tab-corrige, .corrige1{
+    margin: 0 0 0 100px;
+   background-color: rgba(0,0,0,0.6);
+   color:honeydew;
+   border-left: 8px solid rgba(0,0,0,0.7);
+   border-radius: 1px;
+   box-shadow: 2px 2px 2px rgba(0,0,0,0.7);
+   padding: 0 0 0 100px;
+   line-height: 30px;
+}
+.algo h1, .programmation h1{
     text-align: center;
     background-color: darkkhaki;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.precedent, .suivant{
+    border: 2px solid #dedede;
+    padding: 1px 20px 1px 20px;
+    margin: 0 5px 0 0;
+    border-radius: 4px;
+    background-color: darkslategray;
+}
+.precedent a, .suivant a{
+    color: whitesmoke;
+}
+.precedent a:hover, .suivant a:hover, .encouragement a:hover, .encouragement1 a:hover{
+    color: black;
+    text-decoration: none;
+}
+.precedent:hover, .suivant:hover, .encouragement a:hover, .encouragement1 a:hover{
+    background: whitesmoke;
+}
+.encouragement a, .encouragement1 a{
+    background: burlywood;
+    border: 2px solid #dedede;
+    padding: 1px 20px 1px 20px;
+    margin: 0 5px 0 0;
+    border-radius: 4px;
+}
+.encouragement1{
+    text-align: center;
+}
+
+/* Page sur programmation n C++ */
+.exo1, .exo2, .exo3{
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}
+.suite-corrigé{
+    text-align: center;
+}
+.suite-corrigé a:hover{
+    color: black;
+    text-decoration: underline;
+}
+/* Description dans la page du Développeur */
+
+.developpeur img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 2px rgba(0,0,0,0.6);
+}
+.developpeur img:hover{
+    width: 220px;
+    height: 220px;
+}
+.bloc-objectif{
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    background-color: darkgray;
+    padding: 50px;
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.7);
+    text-align: justify;
+}
+.developpeur:first-child{
+    text-align: center;
+}
+em{
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+}
+.bloc-objectif:hover{
+    background-color: rgba(0,0,0,0.6);
+    color: whitesmoke;
+    height: 400px;
+    padding: 100px;
+}
+.objectif{
+    width: 800px;
+}
+
+@media screen and (max-width:780px) {
+    .bloc-objectif{
+        flex-direction: column;
+    } 
+    .developpeur img{
+        margin: auto;
+        width: 300px;
+        height: 350px;
+    }  
+    .objectif{
+        padding: 20px 0 0 0;
+        width: 300px;
+    }
+    .bloc-objectif:hover{
+        background-color: rgba(0,0,0,0.6);
+        color: whitesmoke;
+        height: 1000px;
+        padding: 50px 0 0 50px;
+    }
 }

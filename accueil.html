@@ -6,9 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Accueil </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Bootstrapp/css/bootstrap.min.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 <body>
-    <?php include('header.html'); ?>
+    <header>
+        <nav class="navbar navbar-dark fixed-top bg-dark">
+          <p id="rab-store">
+              Rab Store
+          </p>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01"
+            aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon " id="#haut"></span>
+          </button>
+    
+          <div class="text-right collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto  ">
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="accueil.html" >Accueil</a>
+              </li>    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="plan_du_site.html" >Plan du Site</a>
+              </li>
+    
+    
+              <li class="nav-item">
+                <a class="transition" class="nav-link" href="#contacts">Contacts</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+        </nav>
+        <pre>
+
+
+
+
+        </pre>
+      </header>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+      <script>
+        window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')
+      </script>
+      <script src="popper.min.js"></script>
+      <script src="Bootstrapp/js/bootstrap.min.js"></script>
 
         <section id="accueil">
             <article>
@@ -86,6 +131,51 @@
             </article>
             
         </section>
-    <?php include('footer.html'); ?>
+        <pre>
+
+
+
+        
+        </pre>
+        <footer class="bg-dark">
+            <hr>
+            <div class="container pb-2 text-center text-md-start">
+              <div class="row col-md-12">
+                <div class="col-lg-3 col-md-2 pb-4"><p class="rab-store"> Rab Store </p></div>
+                <div class="col-lg-3 col-md-4 pb-4">
+                  <div class="couleur">
+                    <h5 id="contacts">Contacts</h5>
+                    <ul>
+                      <li id="toto"><a href="mailto:rabelaiskpechekoug@gmail.com" class="forme2"> rabelaiskpechekou@gmail.com </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 pb-4">
+                  <div class="couleur">
+                    <h5 id="plan_du_site">Plan du site</h5>
+                    <ul>
+                      <li><a href="plan_du_site.html" class="forme2"> cliquez ici </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 pb-4 " id="fofo">
+                  <div class="couleur">
+                    <div class="row-md-6 pb-2">
+                      <span class="mr-2">
+                       <a href="https://www.facebook.com">  <img src="facebook.png" title="Suivez Rabelais sur Facbook" alt="Logo de facebook" class="photo"></a>
+                      </span>
+                      <span class="mr-2">
+                       <a href="https://t.me/Rabelais">  <img src="telegram.png" alt="Logo de telegram" title="Ecrivez sur telegram à Rabelais" class="photo"></a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="info">
+                Développé par <a href="administrateur.html" class="forme2"> Rabelais KPECHEKOU </a> | 
+                <span class="couleur"> © Copyrint Août 2021 </span>
+              </div>
+            </div>
+          </footer>
 </body>
 </html>
